@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<!-- 配置常量值，使用Struts2提供的标签，不想使用默认生成标签和样式 -->
+	<constant name="struts.ui.theme" value="simple"/>
+	
+    <package name="crm" namespace="/" extends="struts-default">
+    	<!-- 客户模块 -->
+    	<action name="customerAction_*" class="customerAction" method="{1}">
+    		<result name="initAdd">/jsp/customer/add.jsp</result>
+    		<result name="findAll">/jsp/customer/list.jsp</result>
+    		<result name="success" type="redirect">customerAction_findAll</result>
+    		<result name="initUpdate">/jsp/customer/edit.jsp</result>
+    	</action>
+
+		<!--联系人模块-->
+		<action name="linkmanAction_*" class="linkmanAction" method="{1}">
+			<result name="initAdd">/jsp/linkman/add.jsp</result>
+		</action>
+    </package>
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+
