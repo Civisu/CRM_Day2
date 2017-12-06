@@ -55,6 +55,7 @@
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
             <tx:method name="save*" isolation="DEFAULT" />
+            <tx:method name="add*" isolation="DEFAULT" />
             <tx:method name="find*" isolation="DEFAULT" read-only="true"/>
             <tx:method name="init*" isolation="DEFAULT" read-only="true"/>
             <tx:method name="update*" isolation="DEFAULT" />

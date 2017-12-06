@@ -44,4 +44,11 @@ public class LinkmanAction extends BaseAction implements ModelDriven<Linkman> {
 
         return "initAdd";
     }
+
+    //跳转到新增联系人方法
+    public String add() throws Exception {
+        //调用Service
+        linkmanService.add(linkman);
+        return SUCCESS;
+    }
 }

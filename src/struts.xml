@@ -18,6 +18,7 @@
 		<!--联系人模块-->
 		<action name="linkmanAction_*" class="linkmanAction" method="{1}">
 			<result name="initAdd">/jsp/linkman/add.jsp</result>
+			<result name="success" type="redirect">linkmanAction_list</result>
 		</action>
     </package>
 </struts>
